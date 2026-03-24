@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "accessToken",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzIxZjZkNDkwNzczM2Y3NGY1MDhmMyIsInJvbGUiOiJMaXN0ZW5lciIsImlhdCI6MTc3NDM3NjM3OCwiZXhwIjoxNzc0Mzc3Mjc4fQ.HuaVPuJIU200YppWBTKM_cQgdcx4pzN2oPoQT2-YwPA",
+      "domain": "biobeats.duckdns.org",
+      "path": "/",
+      "expires": 1774377277.969996,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "refreshToken",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzIxZjZkNDkwNzczM2Y3NGY1MDhmMyIsInJvbGUiOiJMaXN0ZW5lciIsImlhdCI6MTc3NDM3NjM3OCwiZXhwIjoxNzc0OTgxMTc4fQ.Yz6BBh44tOSrHdBJPXfqqO1JS-VqYWqtn_H-7iq001o",
+      "domain": "biobeats.duckdns.org",
+      "path": "/",
+      "expires": 1774981177.970165,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": []
+}
