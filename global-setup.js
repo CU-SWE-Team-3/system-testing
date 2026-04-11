@@ -2,21 +2,32 @@ const { chromium } = require('@playwright/test');
 require('dotenv').config();
 
 module.exports = async () => {
-  const browser = await chromium.launch({ headless: false }); // Temporarily set to false so you can watch it
-  const page = await browser.newPage();
+  const browser = await chromium.launch({ headless: false }); // Set to false once to see it happen
+  const context = await browser.newContext();
+  const page = await context.newPage();
 
-  await page.goto(process.env.BASE_URL + '/login');
-  await page.waitForLoadState('networkidle');
-
-  await page.getByTestId('login-email-input').fill(process.env.TEST_USER_EMAIL);
-  await page.getByTestId('login-password-input').fill(process.env.TEST_USER_PASSWORD);
+  console.log('--- Starting Pro Login Sequence ---');
+  await page.goto('https://biobeats.duckdns.org/login');
+  
+  // Use your Pro credentials
+  await page.getByTestId('login-email-input').fill('omarzogmar868@gmail.com');
+  await page.getByTestId('login-password-input').fill('TestPassword123!');
   await page.getByTestId('login-submit-button').click();
 
-  // We removed the flaky waitForResponse. 
-  // Now we strictly wait for the main navigation bar to render, proving we are in.
-  await page.waitForSelector('[data-testid="navbar"]', { timeout: 20000 });
+  // 1. Wait for the avatar to appear
+  await page.getByTestId('navbar-user-avatar').waitFor({ state: 'visible', timeout: 15000 });
   
-  await page.context().storageState({ path: 'storageState.json' });
+  // 2. FORCE REFRESH to make sure the session is actually saved in the browser cookies
+  await page.reload();
+  await page.waitForLoadState('networkidle');
+
+  // 3. Final Check: If we are still logged in after a refresh, save the state
+  if (await page.getByTestId('navbar-user-avatar').isVisible()) {
+      await context.storageState({ path: 'storageState.json' });
+      console.log('✅ PRO SESSION VERIFIED AND SAVED.');
+  } else {
+      throw new Error('❌ Login failed to persist after refresh!');
+  }
+
   await browser.close();
-  console.log('Session saved.');
 };
