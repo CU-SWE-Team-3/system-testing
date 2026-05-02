@@ -12,7 +12,9 @@ import {
   BASE_URL,
   TEST_EMAIL,
   TEST_PASSWORD,
+  TEST_PERMALINK,
   TARGET_TRACK_ID,
+  TARGET_TRACK_PERMALINK,
   TARGET_USER_ID,
   TARGET_PLAYLIST_ID,
   TARGET_CONVERSATION_ID,
@@ -69,8 +71,8 @@ export function setup() {
     return null;
   }
 
-  const userId    = loginBody?.data?.user?._id        || null;
-  const permalink = loginBody?.data?.user?.permalink  || "stress-test";
+  const userId    = loginBody?.data?.user?._id       || null;
+  const permalink = loginBody?.data?.user?.permalink || TEST_PERMALINK;
 
   // ── Admin Login (for Module 11 only) ──────────────────────────────────────
   let adminToken = null;
@@ -103,6 +105,7 @@ export function setup() {
     userId,
     permalink,
     trackId:            TARGET_TRACK_ID,
+    trackPermalink:     TARGET_TRACK_PERMALINK,
     targetUserId:       TARGET_USER_ID,
     playlistId:         TARGET_PLAYLIST_ID,
     conversationId:     TARGET_CONVERSATION_ID,
