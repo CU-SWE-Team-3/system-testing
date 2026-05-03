@@ -10,10 +10,6 @@ test.describe('Module 2: Profile Customization & Updates', () => {
   // =====================================================================
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
-    await page.goto('/login'); 
-    await page.getByTestId('login-email-input').fill('omarzogmar868@gmail.com');
-    await page.getByTestId('login-password-input').fill('OmarTest123!');
-    await page.getByTestId('login-submit-button').click();
     await expect(page.getByTestId('navbar')).toBeVisible({ timeout: 15_000 });
   });
 

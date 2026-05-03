@@ -1,17 +1,10 @@
 const { test, expect } = require('@playwright/test');
 
-const FIXTURE = 'tests/test-audio.mp3';
+const FIXTURE = 'tests/fixtures/test-audio.mp3';
 
 test.describe('Module 4: Audio Management', () => {
 
   test.beforeEach(async ({ page }) => {
-    // HARD LOGIN
-    await page.goto(process.env.BASE_URL + '/login');
-    await page.getByTestId('login-email-input').fill(process.env.TEST_USER_EMAIL);
-    await page.getByTestId('login-password-input').fill(process.env.TEST_USER_PASSWORD);
-    await page.getByTestId('login-submit-button').click();
-    await page.getByTestId('navbar-user-avatar').waitFor({ state: 'visible', timeout: 15000 });
-
     await page.goto(process.env.BASE_URL + '/upload');
   });
 

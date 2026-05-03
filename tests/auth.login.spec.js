@@ -86,10 +86,12 @@ test.describe('Login — Auth Guard', () => {
     const context = await browser.newContext({ storageState: 'storageState.json' });
     const page    = await context.newPage();
 
-    await page.goto('/login');
+    await page.goto((process.env.BASE_URL || '') + '/login');
     await page.waitForLoadState('networkidle');
 
-    // Session must still be valid — navbar proves auth state is intact
+    // App does not redirect from /login, and /login has no navbar.
+    // Verify session is still valid by navigating to a protected page.
+    await page.goto((process.env.BASE_URL || '') + '/feed');
     await expect(page.getByTestId('navbar')).toBeVisible({ timeout: 10_000 });
 
     await context.close();
