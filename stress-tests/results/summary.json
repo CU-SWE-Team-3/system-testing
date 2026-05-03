@@ -1,0 +1,1205 @@
+{
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "setup": {
+                "name": "setup",
+                "path": "::setup",
+                "id": "5c0f8025f7e0b6654089e5b00e950f1a",
+                "groups": {},
+                "checks": {
+                        "[SETUP] Login status 200": {
+                            "name": "[SETUP] Login status 200",
+                            "path": "::setup::[SETUP] Login status 200",
+                            "id": "f46b254dbd6500316a8f14b8e4de216c",
+                            "passes": 1,
+                            "fails": 0
+                        },
+                        "[SETUP] Login success:true": {
+                            "name": "[SETUP] Login success:true",
+                            "path": "::setup::[SETUP] Login success:true",
+                            "id": "dc1ff1b78b63040f2f7936de393f8968",
+                            "passes": 1,
+                            "fails": 0
+                        }
+                    }
+            },
+            "1 Auth": {
+                "name": "1 Auth",
+                "path": "::1 Auth",
+                "id": "da3551fa4c4ac5c31aeff4647ca75a55",
+                "groups": {},
+                "checks": {
+                        "Auth | Signup: status 201, 400, or 409": {
+                            "name": "Auth | Signup: status 201, 400, or 409",
+                            "path": "::1 Auth::Auth | Signup: status 201, 400, or 409",
+                            "id": "0700c3f75ae58e5ad1fad77217ce4fdd",
+                            "passes": 122,
+                            "fails": 87
+                        },
+                        "Auth | Signup: response < 800ms": {
+                            "path": "::1 Auth::Auth | Signup: response < 800ms",
+                            "id": "dd46fd1904b0a778dbd0365bb992355a",
+                            "passes": 0,
+                            "fails": 209,
+                            "name": "Auth | Signup: response < 800ms"
+                        },
+                        "Auth | Login: status 200": {
+                            "id": "568442388407fe5af1a391cfaaa94d49",
+                            "passes": 208,
+                            "fails": 0,
+                            "name": "Auth | Login: status 200",
+                            "path": "::1 Auth::Auth | Login: status 200"
+                        },
+                        "Auth | Login: success true": {
+                            "path": "::1 Auth::Auth | Login: success true",
+                            "id": "30180308a134585d0ddc7779aefea39f",
+                            "passes": 208,
+                            "fails": 0,
+                            "name": "Auth | Login: success true"
+                        },
+                        "Auth | Login: user object": {
+                            "id": "0ba00dd0b5ec346b2f542d1be5dea1ba",
+                            "passes": 208,
+                            "fails": 0,
+                            "name": "Auth | Login: user object",
+                            "path": "::1 Auth::Auth | Login: user object"
+                        },
+                        "Auth | Login: response < 600ms": {
+                            "name": "Auth | Login: response < 600ms",
+                            "path": "::1 Auth::Auth | Login: response < 600ms",
+                            "id": "992bc1ebcbbe47458ef9ce0952c36dc1",
+                            "passes": 208,
+                            "fails": 0
+                        },
+                        "Auth | Refresh: status 200 or 401": {
+                            "passes": 208,
+                            "fails": 0,
+                            "name": "Auth | Refresh: status 200 or 401",
+                            "path": "::1 Auth::Auth | Refresh: status 200 or 401",
+                            "id": "375544f5444741025960c3267bfd6f17"
+                        },
+                        "Auth | Refresh: response < 500ms": {
+                            "fails": 0,
+                            "name": "Auth | Refresh: response < 500ms",
+                            "path": "::1 Auth::Auth | Refresh: response < 500ms",
+                            "id": "81d98dae2664692383e2db9c9f911a95",
+                            "passes": 208
+                        }
+                    }
+            },
+            "2 Profile": {
+                "name": "2 Profile",
+                "path": "::2 Profile",
+                "id": "06aea59208ac91a8411cd9edb4ebce4f",
+                "groups": {},
+                "checks": {
+                        "Profile | GET: status 200": {
+                            "name": "Profile | GET: status 200",
+                            "path": "::2 Profile::Profile | GET: status 200",
+                            "id": "953cca2359beaac17cca53965c8e4fd2",
+                            "passes": 206,
+                            "fails": 0
+                        },
+                        "Profile | GET: user object returned": {
+                            "name": "Profile | GET: user object returned",
+                            "path": "::2 Profile::Profile | GET: user object returned",
+                            "id": "cdcf7833c33b972f11d94f7466445a08",
+                            "passes": 206,
+                            "fails": 0
+                        },
+                        "Profile | GET: permalink matches": {
+                            "passes": 206,
+                            "fails": 0,
+                            "name": "Profile | GET: permalink matches",
+                            "path": "::2 Profile::Profile | GET: permalink matches",
+                            "id": "8fdf1a705d1647c2308b0c0748a3c320"
+                        },
+                        "Profile | GET: response < 400ms": {
+                            "passes": 205,
+                            "fails": 1,
+                            "name": "Profile | GET: response < 400ms",
+                            "path": "::2 Profile::Profile | GET: response < 400ms",
+                            "id": "06e5013f863ef2cfac62908f42e25c66"
+                        },
+                        "Profile | Update: status 200": {
+                            "name": "Profile | Update: status 200",
+                            "path": "::2 Profile::Profile | Update: status 200",
+                            "id": "7e31dd7d6a527846db5f79e10b462d75",
+                            "passes": 206,
+                            "fails": 0
+                        },
+                        "Profile | Update: success true": {
+                            "name": "Profile | Update: success true",
+                            "path": "::2 Profile::Profile | Update: success true",
+                            "id": "432dcec0fb9f92497394e6b0aaa2fad8",
+                            "passes": 206,
+                            "fails": 0
+                        },
+                        "Profile | Update: response < 500ms": {
+                            "passes": 205,
+                            "fails": 1,
+                            "name": "Profile | Update: response < 500ms",
+                            "path": "::2 Profile::Profile | Update: response < 500ms",
+                            "id": "47847b4b1de773aea6ca54b3ddad142a"
+                        },
+                        "Profile | Social Links: status 200 or 400": {
+                            "name": "Profile | Social Links: status 200 or 400",
+                            "path": "::2 Profile::Profile | Social Links: status 200 or 400",
+                            "id": "f0cdae2c57f42c2189f6dcb5bb3ee6e7",
+                            "passes": 205,
+                            "fails": 0
+                        },
+                        "Profile | Social Links: response < 500ms": {
+                            "fails": 2,
+                            "name": "Profile | Social Links: response < 500ms",
+                            "path": "::2 Profile::Profile | Social Links: response < 500ms",
+                            "id": "c3d8bdacaf4a7c10fab22a3964318610",
+                            "passes": 203
+                        }
+                    }
+            },
+            "3 Network": {
+                "name": "3 Network",
+                "path": "::3 Network",
+                "id": "bfd28a528bd92d0b332858814c0206d3",
+                "groups": {},
+                "checks": {
+                        "Network | GET Followers: status 200": {
+                            "name": "Network | GET Followers: status 200",
+                            "path": "::3 Network::Network | GET Followers: status 200",
+                            "id": "f7aabe83cfcb83fe788c7c81b4357777",
+                            "passes": 203,
+                            "fails": 0
+                        },
+                        "Network | GET Followers: data is array": {
+                            "name": "Network | GET Followers: data is array",
+                            "path": "::3 Network::Network | GET Followers: data is array",
+                            "id": "b23bc8388b5c8d429f1614c25b263249",
+                            "passes": 203,
+                            "fails": 0
+                        },
+                        "Network | GET Followers: response < 500ms": {
+                            "passes": 203,
+                            "fails": 0,
+                            "name": "Network | GET Followers: response < 500ms",
+                            "path": "::3 Network::Network | GET Followers: response < 500ms",
+                            "id": "41f5ca001b3aa6b3dd99f21d9bbcd7cd"
+                        },
+                        "Network | GET Following: status 200": {
+                            "passes": 202,
+                            "fails": 0,
+                            "name": "Network | GET Following: status 200",
+                            "path": "::3 Network::Network | GET Following: status 200",
+                            "id": "bf82464803f705378b3d972b7d6771af"
+                        },
+                        "Network | GET Following: response < 500ms": {
+                            "name": "Network | GET Following: response < 500ms",
+                            "path": "::3 Network::Network | GET Following: response < 500ms",
+                            "id": "45f975e807d1c37c5fac0aeef023031d",
+                            "passes": 202,
+                            "fails": 0
+                        },
+                        "Network | Follow: status 200 or 400": {
+                            "fails": 0,
+                            "name": "Network | Follow: status 200 or 400",
+                            "path": "::3 Network::Network | Follow: status 200 or 400",
+                            "id": "77788532b9686e4be648817d5a685c5e",
+                            "passes": 202
+                        },
+                        "Network | Follow: response < 600ms": {
+                            "name": "Network | Follow: response < 600ms",
+                            "path": "::3 Network::Network | Follow: response < 600ms",
+                            "id": "76fd0cf65b90204d2e4d0bab7e77e055",
+                            "passes": 62,
+                            "fails": 140
+                        },
+                        "Network | Unfollow: status 200 or 400": {
+                            "name": "Network | Unfollow: status 200 or 400",
+                            "path": "::3 Network::Network | Unfollow: status 200 or 400",
+                            "id": "80014c87d847e3359ae61af1f4bfe142",
+                            "passes": 200,
+                            "fails": 0
+                        },
+                        "Network | Unfollow: response < 600ms": {
+                            "name": "Network | Unfollow: response < 600ms",
+                            "path": "::3 Network::Network | Unfollow: response < 600ms",
+                            "id": "3625703c7af4a7b23ece6448ce63d2f7",
+                            "passes": 192,
+                            "fails": 8
+                        }
+                    }
+            },
+            "4 Tracks": {
+                "path": "::4 Tracks",
+                "id": "0d0811f3b7f11f9c6e16469f9837c6fa",
+                "groups": {},
+                "checks": {
+                        "Tracks | Upload Init: status 201 or 403": {
+                            "path": "::4 Tracks::Tracks | Upload Init: status 201 or 403",
+                            "id": "d10a326a5b5a14556e2e80f280d7b9f4",
+                            "passes": 199,
+                            "fails": 0,
+                            "name": "Tracks | Upload Init: status 201 or 403"
+                        },
+                        "Tracks | Upload Init: response < 1000ms": {
+                            "name": "Tracks | Upload Init: response < 1000ms",
+                            "path": "::4 Tracks::Tracks | Upload Init: response < 1000ms",
+                            "id": "1550b0015bf00d0d963e2aa61e1f64cc",
+                            "passes": 198,
+                            "fails": 1
+                        },
+                        "Tracks | Upload Init: trackId returned": {
+                            "name": "Tracks | Upload Init: trackId returned",
+                            "path": "::4 Tracks::Tracks | Upload Init: trackId returned",
+                            "id": "0a0ee5f7560074bc076177ff3d915bbb",
+                            "passes": 199,
+                            "fails": 0
+                        },
+                        "Tracks | Upload Init: uploadUrl returned": {
+                            "path": "::4 Tracks::Tracks | Upload Init: uploadUrl returned",
+                            "id": "857f1f370fba773037a7ea5dcc378870",
+                            "passes": 199,
+                            "fails": 0,
+                            "name": "Tracks | Upload Init: uploadUrl returned"
+                        },
+                        "Tracks | Upload Cleanup: status 200 or 404": {
+                            "path": "::4 Tracks::Tracks | Upload Cleanup: status 200 or 404",
+                            "id": "f391f5545b23211fa2d15416126329f0",
+                            "passes": 199,
+                            "fails": 0,
+                            "name": "Tracks | Upload Cleanup: status 200 or 404"
+                        },
+                        "Tracks | GET Track: status 200": {
+                            "fails": 196,
+                            "name": "Tracks | GET Track: status 200",
+                            "path": "::4 Tracks::Tracks | GET Track: status 200",
+                            "id": "dd28c0d061f2894c7b73f733284720ce",
+                            "passes": 0
+                        },
+                        "Tracks | GET Track: track object returned": {
+                            "name": "Tracks | GET Track: track object returned",
+                            "path": "::4 Tracks::Tracks | GET Track: track object returned",
+                            "id": "fe78413e6459f6ad5955a397281c8a06",
+                            "passes": 0,
+                            "fails": 196
+                        },
+                        "Tracks | GET Track: processingState Finished": {
+                            "name": "Tracks | GET Track: processingState Finished",
+                            "path": "::4 Tracks::Tracks | GET Track: processingState Finished",
+                            "id": "e176f8888a0ec33775affe5300ca15f6",
+                            "passes": 0,
+                            "fails": 196
+                        },
+                        "Tracks | GET Track: response < 500ms": {
+                            "name": "Tracks | GET Track: response < 500ms",
+                            "path": "::4 Tracks::Tracks | GET Track: response < 500ms",
+                            "id": "c084cdfb1b1c64dfd67dd8be466c7082",
+                            "passes": 195,
+                            "fails": 1
+                        }
+                    },
+                "name": "4 Tracks"
+            },
+            "5 Playback": {
+                "name": "5 Playback",
+                "path": "::5 Playback",
+                "id": "df2c2600a7abd35b967bccf7507dfde5",
+                "groups": {},
+                "checks": {
+                        "Playback | GET Stream: status 200": {
+                            "name": "Playback | GET Stream: status 200",
+                            "path": "::5 Playback::Playback | GET Stream: status 200",
+                            "id": "3a3a5d4e58c21ddb352c5e5901b537f3",
+                            "passes": 194,
+                            "fails": 0
+                        },
+                        "Playback | GET Stream: hlsUrl in response": {
+                            "id": "aa087099a14a1cb14d7f1e0f5f782a95",
+                            "passes": 194,
+                            "fails": 0,
+                            "name": "Playback | GET Stream: hlsUrl in response",
+                            "path": "::5 Playback::Playback | GET Stream: hlsUrl in response"
+                        },
+                        "Playback | GET Stream: streamUrl has .m3u8": {
+                            "name": "Playback | GET Stream: streamUrl has .m3u8",
+                            "path": "::5 Playback::Playback | GET Stream: streamUrl has .m3u8",
+                            "id": "25e58940d5685527e7b189f4fe2d3a32",
+                            "passes": 194,
+                            "fails": 0
+                        },
+                        "Playback | GET Stream: response < 700ms": {
+                            "passes": 194,
+                            "fails": 0,
+                            "name": "Playback | GET Stream: response < 700ms",
+                            "path": "::5 Playback::Playback | GET Stream: response < 700ms",
+                            "id": "4475f57532388ad4557977f05e995070"
+                        },
+                        "Playback | PUT Player State: status 200": {
+                            "id": "fbd39b1c710bb5da3ff428d0a0a5d339",
+                            "passes": 193,
+                            "fails": 0,
+                            "name": "Playback | PUT Player State: status 200",
+                            "path": "::5 Playback::Playback | PUT Player State: status 200"
+                        },
+                        "Playback | PUT Player State: state saved": {
+                            "name": "Playback | PUT Player State: state saved",
+                            "path": "::5 Playback::Playback | PUT Player State: state saved",
+                            "id": "8df838ca6aa92296c63f35781cba41e4",
+                            "passes": 193,
+                            "fails": 0
+                        },
+                        "Playback | PUT Player State: response < 500ms": {
+                            "name": "Playback | PUT Player State: response < 500ms",
+                            "path": "::5 Playback::Playback | PUT Player State: response < 500ms",
+                            "id": "d66b782fa7c9e85784d86e050e014f0b",
+                            "passes": 175,
+                            "fails": 18
+                        },
+                        "Playback | POST Progress: status 200 or 201": {
+                            "name": "Playback | POST Progress: status 200 or 201",
+                            "path": "::5 Playback::Playback | POST Progress: status 200 or 201",
+                            "id": "7abae0264e728e03be612f6a044585df",
+                            "passes": 190,
+                            "fails": 0
+                        },
+                        "Playback | POST Progress: success true": {
+                            "name": "Playback | POST Progress: success true",
+                            "path": "::5 Playback::Playback | POST Progress: success true",
+                            "id": "aa553948b37907343fdde66cdc2eb884",
+                            "passes": 190,
+                            "fails": 0
+                        },
+                        "Playback | POST Progress: response < 600ms": {
+                            "name": "Playback | POST Progress: response < 600ms",
+                            "path": "::5 Playback::Playback | POST Progress: response < 600ms",
+                            "id": "426c11842ca07df0d4e909724d096d1c",
+                            "passes": 184,
+                            "fails": 6
+                        },
+                        "Playback | GET History: status 200": {
+                            "id": "7b73d21ac183e3fc2f52b8c6f648bf56",
+                            "passes": 190,
+                            "fails": 0,
+                            "name": "Playback | GET History: status 200",
+                            "path": "::5 Playback::Playback | GET History: status 200"
+                        },
+                        "Playback | GET History: response < 600ms": {
+                            "name": "Playback | GET History: response < 600ms",
+                            "path": "::5 Playback::Playback | GET History: response < 600ms",
+                            "id": "b32a71ab9e11d6ca13f9befc262889c2",
+                            "passes": 181,
+                            "fails": 9
+                        }
+                    }
+            },
+            "6 Engagement": {
+                "checks": {
+                    "Engagement | Like: status 200, 201, or 400": {
+                        "name": "Engagement | Like: status 200, 201, or 400",
+                        "path": "::6 Engagement::Engagement | Like: status 200, 201, or 400",
+                        "id": "306ba9d59fc6089882cc45c88a3c427e",
+                        "passes": 187,
+                        "fails": 0
+                    },
+                    "Engagement | Like: response < 500ms": {
+                        "path": "::6 Engagement::Engagement | Like: response < 500ms",
+                        "id": "1dd7ddf23ef268c87bd4a63b3f7dd8e4",
+                        "passes": 167,
+                        "fails": 20,
+                        "name": "Engagement | Like: response < 500ms"
+                    },
+                    "Engagement | Comment: status 201": {
+                        "name": "Engagement | Comment: status 201",
+                        "path": "::6 Engagement::Engagement | Comment: status 201",
+                        "id": "0b7180a29ba5e789a672b0e001491bff",
+                        "passes": 186,
+                        "fails": 0
+                    },
+                    "Engagement | Comment: comment in response": {
+                        "id": "3c431fb608a69b949927b5cd893f3836",
+                        "passes": 186,
+                        "fails": 0,
+                        "name": "Engagement | Comment: comment in response",
+                        "path": "::6 Engagement::Engagement | Comment: comment in response"
+                    },
+                    "Engagement | Comment: response < 600ms": {
+                        "name": "Engagement | Comment: response < 600ms",
+                        "path": "::6 Engagement::Engagement | Comment: response < 600ms",
+                        "id": "d1aca9596f3f4ac4cb0f0ac32b5c2b6e",
+                        "passes": 173,
+                        "fails": 13
+                    },
+                    "Engagement | Repost: status 201 or 400": {
+                        "name": "Engagement | Repost: status 201 or 400",
+                        "path": "::6 Engagement::Engagement | Repost: status 201 or 400",
+                        "id": "c45eccf609fcddaef73284b6c16f8cb3",
+                        "passes": 184,
+                        "fails": 0
+                    },
+                    "Engagement | Repost: response < 600ms": {
+                        "path": "::6 Engagement::Engagement | Repost: response < 600ms",
+                        "id": "073c94f0ae5d4c58f8e2a63973247c59",
+                        "passes": 184,
+                        "fails": 0,
+                        "name": "Engagement | Repost: response < 600ms"
+                    },
+                    "Engagement | GET Likers: status 200": {
+                        "fails": 0,
+                        "name": "Engagement | GET Likers: status 200",
+                        "path": "::6 Engagement::Engagement | GET Likers: status 200",
+                        "id": "ac286d32c01c1c6e5dd28a6baf670840",
+                        "passes": 182
+                    },
+                    "Engagement | GET Likers: response < 500ms": {
+                        "path": "::6 Engagement::Engagement | GET Likers: response < 500ms",
+                        "id": "9a6fa94aebd9ef379185c784c31525bf",
+                        "passes": 175,
+                        "fails": 7,
+                        "name": "Engagement | GET Likers: response < 500ms"
+                    },
+                    "Engagement | Unlike: status 200 or 400": {
+                        "fails": 0,
+                        "name": "Engagement | Unlike: status 200 or 400",
+                        "path": "::6 Engagement::Engagement | Unlike: status 200 or 400",
+                        "id": "b0f9564e9030ef62858c03f5cbcee96a",
+                        "passes": 181
+                    },
+                    "Engagement | Unlike: response < 500ms": {
+                        "fails": 13,
+                        "name": "Engagement | Unlike: response < 500ms",
+                        "path": "::6 Engagement::Engagement | Unlike: response < 500ms",
+                        "id": "7aa73d387bca747bf5601a90968e8c60",
+                        "passes": 168
+                    }
+                },
+                "name": "6 Engagement",
+                "path": "::6 Engagement",
+                "id": "5152912dc60aac108cdb1de484873874",
+                "groups": {}
+            },
+            "7 Playlists": {
+                "name": "7 Playlists",
+                "path": "::7 Playlists",
+                "id": "83181b729a7614c2615ab036bf9ec468",
+                "groups": {},
+                "checks": {
+                        "Playlists | Create: status 201": {
+                            "name": "Playlists | Create: status 201",
+                            "path": "::7 Playlists::Playlists | Create: status 201",
+                            "id": "763a606401b6b4849a2ea4061bfadefb",
+                            "passes": 177,
+                            "fails": 0
+                        },
+                        "Playlists | Create: playlistId returned": {
+                            "id": "fe3b9f990b1f50e27c846757084a303a",
+                            "passes": 177,
+                            "fails": 0,
+                            "name": "Playlists | Create: playlistId returned",
+                            "path": "::7 Playlists::Playlists | Create: playlistId returned"
+                        },
+                        "Playlists | Create: response < 600ms": {
+                            "path": "::7 Playlists::Playlists | Create: response < 600ms",
+                            "id": "33e79e0e241b91cd51871c74fe574142",
+                            "passes": 155,
+                            "fails": 22,
+                            "name": "Playlists | Create: response < 600ms"
+                        },
+                        "Playlists | GET: status 200": {
+                            "path": "::7 Playlists::Playlists | GET: status 200",
+                            "id": "b11ec8b3c5d0b6ec8fcc2b2992964e48",
+                            "passes": 176,
+                            "fails": 0,
+                            "name": "Playlists | GET: status 200"
+                        },
+                        "Playlists | GET: playlist object returned": {
+                            "path": "::7 Playlists::Playlists | GET: playlist object returned",
+                            "id": "c5042898484735c0c920b482180d8453",
+                            "passes": 176,
+                            "fails": 0,
+                            "name": "Playlists | GET: playlist object returned"
+                        },
+                        "Playlists | GET: response < 500ms": {
+                            "name": "Playlists | GET: response < 500ms",
+                            "path": "::7 Playlists::Playlists | GET: response < 500ms",
+                            "id": "c23631ba46f261b8b1cd413324f712a0",
+                            "passes": 175,
+                            "fails": 1
+                        },
+                        "Playlists | Update: status 200": {
+                            "path": "::7 Playlists::Playlists | Update: status 200",
+                            "id": "fa1f554f5dd2f7f150e152fccad5ef2c",
+                            "passes": 174,
+                            "fails": 1,
+                            "name": "Playlists | Update: status 200"
+                        },
+                        "Playlists | Update: response < 500ms": {
+                            "passes": 148,
+                            "fails": 27,
+                            "name": "Playlists | Update: response < 500ms",
+                            "path": "::7 Playlists::Playlists | Update: response < 500ms",
+                            "id": "99e73aa56551a55cf959ee9c06600fb9"
+                        },
+                        "Playlists | Track Sequence: status 200": {
+                            "id": "f60339a2a567fdb3112fbde19dc3c7ad",
+                            "passes": 173,
+                            "fails": 0,
+                            "name": "Playlists | Track Sequence: status 200",
+                            "path": "::7 Playlists::Playlists | Track Sequence: status 200"
+                        },
+                        "Playlists | Track Sequence: response < 600ms": {
+                            "name": "Playlists | Track Sequence: response < 600ms",
+                            "path": "::7 Playlists::Playlists | Track Sequence: response < 600ms",
+                            "id": "0a6bfd6783f8a181b18435dcb2843096",
+                            "passes": 168,
+                            "fails": 5
+                        },
+                        "Playlists | Delete: status 204 or 404": {
+                            "name": "Playlists | Delete: status 204 or 404",
+                            "path": "::7 Playlists::Playlists | Delete: status 204 or 404",
+                            "id": "c489cdebaf02d31fe3773dea50ccf040",
+                            "passes": 171,
+                            "fails": 0
+                        },
+                        "Playlists | Delete: response < 500ms": {
+                            "id": "6c05befc7835d9d9fa16bd6738083af2",
+                            "passes": 169,
+                            "fails": 2,
+                            "name": "Playlists | Delete: response < 500ms",
+                            "path": "::7 Playlists::Playlists | Delete: response < 500ms"
+                        }
+                    }
+            },
+            "8 Discovery": {
+                "name": "8 Discovery",
+                "path": "::8 Discovery",
+                "id": "c1f1cf6503d83d96bbeb48dbe897a41d",
+                "groups": {},
+                "checks": {
+                        "Discovery | Trending: status 200": {
+                            "name": "Discovery | Trending: status 200",
+                            "path": "::8 Discovery::Discovery | Trending: status 200",
+                            "id": "e9297c5ec76fb1b985c6d7d19a349d65",
+                            "passes": 167,
+                            "fails": 0
+                        },
+                        "Discovery | Trending: response < 500ms": {
+                            "passes": 167,
+                            "fails": 0,
+                            "name": "Discovery | Trending: response < 500ms",
+                            "path": "::8 Discovery::Discovery | Trending: response < 500ms",
+                            "id": "621620ff2cfd9e63d67bfd52c2305ada"
+                        },
+                        "Discovery | Recommendations: status 200": {
+                            "name": "Discovery | Recommendations: status 200",
+                            "path": "::8 Discovery::Discovery | Recommendations: status 200",
+                            "id": "13a4433b50eac4799044dc30acf3bd11",
+                            "passes": 165,
+                            "fails": 0
+                        },
+                        "Discovery | Recommendations: tracks array": {
+                            "name": "Discovery | Recommendations: tracks array",
+                            "path": "::8 Discovery::Discovery | Recommendations: tracks array",
+                            "id": "ac0fc05e33fd269945bc3f373f3471b5",
+                            "passes": 165,
+                            "fails": 0
+                        },
+                        "Discovery | Recommendations: response < 700ms": {
+                            "id": "ef384d0f4889d4f011a1b104c802ca33",
+                            "passes": 161,
+                            "fails": 4,
+                            "name": "Discovery | Recommendations: response < 700ms",
+                            "path": "::8 Discovery::Discovery | Recommendations: response < 700ms"
+                        },
+                        "Discovery | Search: status 200": {
+                            "passes": 165,
+                            "fails": 0,
+                            "name": "Discovery | Search: status 200",
+                            "path": "::8 Discovery::Discovery | Search: status 200",
+                            "id": "a54064ea28f1cc65d2ee74d4f07ab55a"
+                        },
+                        "Discovery | Search: data returned": {
+                            "name": "Discovery | Search: data returned",
+                            "path": "::8 Discovery::Discovery | Search: data returned",
+                            "id": "725e12d47c71e3c089e886b816db0cc8",
+                            "passes": 165,
+                            "fails": 0
+                        },
+                        "Discovery | Search: response < 600ms": {
+                            "name": "Discovery | Search: response < 600ms",
+                            "path": "::8 Discovery::Discovery | Search: response < 600ms",
+                            "id": "ba02e3442ebe0f42c6907ba06c67e1e5",
+                            "passes": 161,
+                            "fails": 4
+                        },
+                        "Discovery | Feed: status 200": {
+                            "passes": 164,
+                            "fails": 0,
+                            "name": "Discovery | Feed: status 200",
+                            "path": "::8 Discovery::Discovery | Feed: status 200",
+                            "id": "9c50cf796ccc4f63a87f5c52a25e6605"
+                        },
+                        "Discovery | Feed: feed array": {
+                            "id": "82a0e8965269b73d2081e7cb7373e8a6",
+                            "passes": 164,
+                            "fails": 0,
+                            "name": "Discovery | Feed: feed array",
+                            "path": "::8 Discovery::Discovery | Feed: feed array"
+                        },
+                        "Discovery | Feed: response < 600ms": {
+                            "fails": 25,
+                            "name": "Discovery | Feed: response < 600ms",
+                            "path": "::8 Discovery::Discovery | Feed: response < 600ms",
+                            "id": "6c3b2713e0227a5bc368920a65c70f3a",
+                            "passes": 139
+                        }
+                    }
+            },
+            "9 Messages": {
+                "path": "::9 Messages",
+                "id": "0e9e89f900db3d693a01ec101d584fb0",
+                "groups": {},
+                "checks": {
+                        "Messages | Send: status 201, 400, or 403": {
+                            "id": "82b61fd5b8c48b6c2aefbdb456e97d2c",
+                            "passes": 163,
+                            "fails": 0,
+                            "name": "Messages | Send: status 201, 400, or 403",
+                            "path": "::9 Messages::Messages | Send: status 201, 400, or 403"
+                        },
+                        "Messages | Send: response < 700ms": {
+                            "name": "Messages | Send: response < 700ms",
+                            "path": "::9 Messages::Messages | Send: response < 700ms",
+                            "id": "8b2aa7b4d522487cc85eef1a41d7c438",
+                            "passes": 162,
+                            "fails": 1
+                        },
+                        "Messages | List Convs: status 200": {
+                            "name": "Messages | List Convs: status 200",
+                            "path": "::9 Messages::Messages | List Convs: status 200",
+                            "id": "71e11f3acf9b47f7a6c8951a0f561a33",
+                            "passes": 162,
+                            "fails": 0
+                        },
+                        "Messages | List Convs: response < 600ms": {
+                            "name": "Messages | List Convs: response < 600ms",
+                            "path": "::9 Messages::Messages | List Convs: response < 600ms",
+                            "id": "8b73fe8e1b705cea59006b489039ec0a",
+                            "passes": 160,
+                            "fails": 2
+                        },
+                        "Messages | GET Messages: status 200": {
+                            "name": "Messages | GET Messages: status 200",
+                            "path": "::9 Messages::Messages | GET Messages: status 200",
+                            "id": "e65f272d7087c1e4cafc7a1441fa76bd",
+                            "passes": 0,
+                            "fails": 162
+                        },
+                        "Messages | GET Messages: response < 600ms": {
+                            "passes": 162,
+                            "fails": 0,
+                            "name": "Messages | GET Messages: response < 600ms",
+                            "path": "::9 Messages::Messages | GET Messages: response < 600ms",
+                            "id": "cfd5c679a05a8e0936f0774ea07f521d"
+                        },
+                        "Messages | Mark Read: status 200": {
+                            "name": "Messages | Mark Read: status 200",
+                            "path": "::9 Messages::Messages | Mark Read: status 200",
+                            "id": "9e19562859950b06f6fc6488bc12838d",
+                            "passes": 162,
+                            "fails": 0
+                        },
+                        "Messages | Mark Read: response < 500ms": {
+                            "id": "1c6a80270013df2c6b326617fc380e0c",
+                            "passes": 160,
+                            "fails": 2,
+                            "name": "Messages | Mark Read: response < 500ms",
+                            "path": "::9 Messages::Messages | Mark Read: response < 500ms"
+                        }
+                    },
+                "name": "9 Messages"
+            },
+            "10 Notifications": {
+                "name": "10 Notifications",
+                "path": "::10 Notifications",
+                "id": "2736fa7b0cc6e3e3842be4a03c7dad04",
+                "groups": {},
+                "checks": {
+                        "Notifications | Unread Count: status 200": {
+                            "id": "1dc54f41fefe55bfb7f222e9244ea409",
+                            "passes": 161,
+                            "fails": 0,
+                            "name": "Notifications | Unread Count: status 200",
+                            "path": "::10 Notifications::Notifications | Unread Count: status 200"
+                        },
+                        "Notifications | Unread Count: response < 300ms": {
+                            "name": "Notifications | Unread Count: response < 300ms",
+                            "path": "::10 Notifications::Notifications | Unread Count: response < 300ms",
+                            "id": "333d8f145b8261baff3697912e49e60c",
+                            "passes": 159,
+                            "fails": 2
+                        },
+                        "Notifications | Feed: status 200": {
+                            "path": "::10 Notifications::Notifications | Feed: status 200",
+                            "id": "6d675bc06ebc56b485ad58fdc55fc9c1",
+                            "passes": 159,
+                            "fails": 0,
+                            "name": "Notifications | Feed: status 200"
+                        },
+                        "Notifications | Feed: response < 500ms": {
+                            "name": "Notifications | Feed: response < 500ms",
+                            "path": "::10 Notifications::Notifications | Feed: response < 500ms",
+                            "id": "d1fce471fd6d025fd16f26d2234fe500",
+                            "passes": 149,
+                            "fails": 10
+                        },
+                        "Notifications | Mark All Read: status 200": {
+                            "name": "Notifications | Mark All Read: status 200",
+                            "path": "::10 Notifications::Notifications | Mark All Read: status 200",
+                            "id": "afe45146b603dee180b8995086b898d1",
+                            "passes": 159,
+                            "fails": 0
+                        },
+                        "Notifications | Mark All Read: response < 500ms": {
+                            "name": "Notifications | Mark All Read: response < 500ms",
+                            "path": "::10 Notifications::Notifications | Mark All Read: response < 500ms",
+                            "id": "e5bb88db3d018a647cdf1bbdeb033676",
+                            "passes": 156,
+                            "fails": 3
+                        }
+                    }
+            },
+            "11 Admin": {
+                "name": "11 Admin",
+                "path": "::11 Admin",
+                "id": "2cf02d2c4d9f834b3a0c786afe68b1ba",
+                "groups": {},
+                "checks": {
+                        "Admin | Stats: status 200": {
+                            "name": "Admin | Stats: status 200",
+                            "path": "::11 Admin::Admin | Stats: status 200",
+                            "id": "eb07fa994eb01246323034464cd744e6",
+                            "passes": 0,
+                            "fails": 158
+                        },
+                        "Admin | Stats: success true": {
+                            "fails": 158,
+                            "name": "Admin | Stats: success true",
+                            "path": "::11 Admin::Admin | Stats: success true",
+                            "id": "72e1085cf0b1832477b21a6e7494f485",
+                            "passes": 0
+                        },
+                        "Admin | Stats: response < 800ms": {
+                            "name": "Admin | Stats: response < 800ms",
+                            "path": "::11 Admin::Admin | Stats: response < 800ms",
+                            "id": "6c89f9d562ef42b5bacedce8aa61da83",
+                            "passes": 158,
+                            "fails": 0
+                        }
+                    }
+            },
+            "12 Auth Misc": {
+                "path": "::12 Auth Misc",
+                "id": "f65f81b81cce865ca101daf61c0cb15d",
+                "groups": {},
+                "checks": {
+                        "Auth Misc | Google Mobile: status 200 or 400": {
+                            "id": "9718b61ffda0555e133d97d70227f486",
+                            "passes": 158,
+                            "fails": 0,
+                            "name": "Auth Misc | Google Mobile: status 200 or 400",
+                            "path": "::12 Auth Misc::Auth Misc | Google Mobile: status 200 or 400"
+                        },
+                        "Auth Misc | Google Mobile: not a 500": {
+                            "path": "::12 Auth Misc::Auth Misc | Google Mobile: not a 500",
+                            "id": "f37f2353756f18f75976c44b7462e92d",
+                            "passes": 158,
+                            "fails": 0,
+                            "name": "Auth Misc | Google Mobile: not a 500"
+                        },
+                        "Auth Misc | Google Mobile: response < 600ms": {
+                            "id": "bbdcbdb846c2299259d963ece2b47ee9",
+                            "passes": 158,
+                            "fails": 0,
+                            "name": "Auth Misc | Google Mobile: response < 600ms",
+                            "path": "::12 Auth Misc::Auth Misc | Google Mobile: response < 600ms"
+                        },
+                        "Auth Misc | Forgot Password: status 200": {
+                            "passes": 59,
+                            "fails": 72,
+                            "name": "Auth Misc | Forgot Password: status 200",
+                            "path": "::12 Auth Misc::Auth Misc | Forgot Password: status 200",
+                            "id": "e02901290a115dcf5200de614d5abe32"
+                        },
+                        "Auth Misc | Forgot Password: success true": {
+                            "name": "Auth Misc | Forgot Password: success true",
+                            "path": "::12 Auth Misc::Auth Misc | Forgot Password: success true",
+                            "id": "231ff18b75bdedd395f10a49ade0bb2c",
+                            "passes": 59,
+                            "fails": 72
+                        },
+                        "Auth Misc | Forgot Password: response < 800ms": {
+                            "passes": 0,
+                            "fails": 131,
+                            "name": "Auth Misc | Forgot Password: response < 800ms",
+                            "path": "::12 Auth Misc::Auth Misc | Forgot Password: response < 800ms",
+                            "id": "6d535c8a3d8c80f16ed08e1e69962913"
+                        },
+                        "Auth Misc | Resend Verification: status 200": {
+                            "name": "Auth Misc | Resend Verification: status 200",
+                            "path": "::12 Auth Misc::Auth Misc | Resend Verification: status 200",
+                            "id": "2320ced00bc6874a096c93f1cbea7a0e",
+                            "passes": 130,
+                            "fails": 0
+                        },
+                        "Auth Misc | Resend Verification: success true": {
+                            "name": "Auth Misc | Resend Verification: success true",
+                            "path": "::12 Auth Misc::Auth Misc | Resend Verification: success true",
+                            "id": "475cb0a31e9bb20b2ac72a37a302e6f1",
+                            "passes": 130,
+                            "fails": 0
+                        },
+                        "Auth Misc | Resend Verification: response < 800ms": {
+                            "passes": 130,
+                            "fails": 0,
+                            "name": "Auth Misc | Resend Verification: response < 800ms",
+                            "path": "::12 Auth Misc::Auth Misc | Resend Verification: response < 800ms",
+                            "id": "972aad1e47734dffa5e6a2d82a21ab9b"
+                        },
+                        "Auth Misc | Reset Password: status 400": {
+                            "name": "Auth Misc | Reset Password: status 400",
+                            "path": "::12 Auth Misc::Auth Misc | Reset Password: status 400",
+                            "id": "9c2cfb7482927ebe483bcfde7866cbae",
+                            "passes": 129,
+                            "fails": 0
+                        },
+                        "Auth Misc | Reset Password: not a 500": {
+                            "name": "Auth Misc | Reset Password: not a 500",
+                            "path": "::12 Auth Misc::Auth Misc | Reset Password: not a 500",
+                            "id": "3c7fe0b4817b191b7c88cdc4a99a5ba2",
+                            "passes": 129,
+                            "fails": 0
+                        },
+                        "Auth Misc | Reset Password: response < 600ms": {
+                            "path": "::12 Auth Misc::Auth Misc | Reset Password: response < 600ms",
+                            "id": "8cd9ef382430f8c54c6d29536bb5a010",
+                            "passes": 129,
+                            "fails": 0,
+                            "name": "Auth Misc | Reset Password: response < 600ms"
+                        }
+                    },
+                "name": "12 Auth Misc"
+            },
+            "teardown": {
+                "name": "teardown",
+                "path": "::teardown",
+                "id": "a8a9942382e8ffe2e56ef29e664b8229",
+                "groups": {},
+                "checks": {
+                        "[TEARDOWN] Logout status 200": {
+                            "path": "::teardown::[TEARDOWN] Logout status 200",
+                            "id": "87b044d0a049a2e1174b3a6020b38a37",
+                            "passes": 1,
+                            "fails": 0,
+                            "name": "[TEARDOWN] Logout status 200"
+                        }
+                    }
+            }
+        },
+        "checks": {}
+    },
+    "metrics": {
+        "biobeats_track_upload_init_rate": {
+            "passes": 198,
+            "fails": 1,
+            "value": 0.9949748743718593
+        },
+        "http_reqs": {
+            "rate": 15.682037528546777,
+            "count": 8022
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "iteration_duration": {
+            "max": 184479.8686,
+            "p(90)": 163880.61246,
+            "p(95)": 165691.086565,
+            "avg": 136009.78992812498,
+            "min": 67379.354,
+            "med": 141307.59879999998
+        },
+        "http_req_duration{group:::1 Auth}": {
+            "med": 241.2862,
+            "max": 60001.3114,
+            "p(90)": 59999.51478,
+            "p(95)": 60000.38518,
+            "avg": 13098.850636160001,
+            "min": 0.5462,
+            "thresholds": {
+                "p(95)<600": true
+            }
+        },
+        "biobeats_login_success_rate": {
+            "passes": 208,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_duration{group:::5 Playback}": {
+            "max": 1056.1368,
+            "p(90)": 379.03995999999995,
+            "p(95)": 541.1366299999988,
+            "avg": 287.6646251629724,
+            "min": 124.745,
+            "med": 279.788,
+            "thresholds": {
+                "p(95)<700": false
+            }
+        },
+        "http_req_duration{group:::9 Messages}": {
+            "min": 63.068,
+            "med": 207.8922,
+            "max": 719.9018,
+            "p(90)": 295.94566000000003,
+            "p(95)": 412.94686000000013,
+            "avg": 210.0133260400616,
+            "thresholds": {
+                "p(95)<700": false
+            }
+        },
+        "biobeats_comment_success_rate": {
+            "fails": 13,
+            "passes": 173,
+            "value": 0.9301075268817204
+        },
+        "http_req_duration{group:::4 Tracks}": {
+            "p(95)": 481.7902550000001,
+            "avg": 262.35588451178404,
+            "min": 124.6332,
+            "med": 278.6947,
+            "max": 1161.8163,
+            "p(90)": 338.38667000000015,
+            "thresholds": {
+                "p(95)<1000": false
+            }
+        },
+        "http_req_duration{group:::7 Playlists}": {
+            "avg": 308.06054816513756,
+            "min": 126.8243,
+            "med": 282.17285,
+            "max": 987.0904,
+            "p(90)": 472.93344999999994,
+            "p(95)": 597.5051749999996,
+            "thresholds": {
+                "p(95)<600": false
+            }
+        },
+        "vus": {
+            "value": 1,
+            "min": 0,
+            "max": 100
+        },
+        "http_req_sending": {
+            "avg": 0.010778297182747447,
+            "min": 0,
+            "med": 0,
+            "max": 3.9114,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "data_received": {
+            "count": 19379348,
+            "rate": 37884.27606765993
+        },
+        "http_req_connecting": {
+            "avg": 0.02995359012715033,
+            "min": 0,
+            "med": 0,
+            "max": 5.3379,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "vus_max": {
+            "max": 100,
+            "value": 100,
+            "min": 100
+        },
+        "http_req_duration{group:::11 Admin}": {
+            "med": 69.0024,
+            "max": 482.6609,
+            "p(90)": 83.67097000000003,
+            "p(95)": 139.67459000000005,
+            "avg": 82.65616772151901,
+            "min": 62.2941,
+            "thresholds": {
+                "p(95)<800": false
+            }
+        },
+        "http_req_duration{expected_response:true}": {
+            "max": 59531.1815,
+            "p(90)": 511.9838,
+            "p(95)": 718.8427,
+            "avg": 985.7172917545821,
+            "min": 0.5462,
+            "med": 255.7676
+        },
+        "data_sent": {
+            "count": 6240287,
+            "rate": 12199.004602705383
+        },
+        "http_req_duration{group:::12 Auth Misc}": {
+            "avg": 10842.075400912407,
+            "min": 0.5094,
+            "med": 67.7166,
+            "max": 60001.1994,
+            "p(90)": 60000.30906,
+            "p(95)": 60000.582345,
+            "thresholds": {
+                "p(95)<900": true
+            }
+        },
+        "http_req_duration{group:::3 Network}": {
+            "p(90)": 694.56882,
+            "p(95)": 740.90789,
+            "avg": 296.3099407682775,
+            "min": 122.3337,
+            "med": 155.0723,
+            "max": 1710.1203,
+            "thresholds": {
+                "p(95)<600": true
+            }
+        },
+        "http_req_duration{group:::2 Profile}": {
+            "p(90)": 167.33348,
+            "p(95)": 209.7055799999997,
+            "avg": 130.12201410048624,
+            "min": 62.1858,
+            "med": 134.9027,
+            "max": 686.4717,
+            "thresholds": {
+                "p(95)<500": false
+            }
+        },
+        "http_req_receiving": {
+            "avg": 0.3867608701072044,
+            "min": 0,
+            "med": 0.384,
+            "max": 12.1825,
+            "p(90)": 0.9205,
+            "p(95)": 0.993795
+        },
+        "biobeats_like_success_rate": {
+            "passes": 94,
+            "fails": 93,
+            "value": 0.5026737967914439
+        },
+        "http_req_duration{group:::6 Engagement}": {
+            "min": 187.0726,
+            "med": 244.72995,
+            "max": 918.3537,
+            "p(90)": 448.03324000000003,
+            "p(95)": 574.321165,
+            "avg": 306.3070690217395,
+            "thresholds": {
+                "p(95)<600": false
+            }
+        },
+        "iterations": {
+            "count": 128,
+            "rate": 0.25022448312814605
+        },
+        "group_duration": {
+            "p(95)": 64381.16001,
+            "avg": 11942.158443149394,
+            "min": 2062.7174,
+            "med": 6046.0108,
+            "max": 65277.1983,
+            "p(90)": 42057.46227000008
+        },
+        "http_req_blocked": {
+            "avg": 0.03503945400149587,
+            "min": 0,
+            "med": 0,
+            "max": 8.2605,
+            "p(90)": 0,
+            "p(95)": 0
+        },
+        "http_req_waiting": {
+            "p(90)": 511.6361500000002,
+            "p(95)": 819.9364599999999,
+            "avg": 1978.4794026053341,
+            "min": 0.5075,
+            "med": 212.3681,
+            "max": 60001.2725
+        },
+        "http_req_duration{group:::8 Discovery}": {
+            "med": 267.5796,
+            "max": 1076.4913,
+            "p(90)": 517.0639,
+            "p(95)": 616.5278,
+            "avg": 297.55286580937974,
+            "min": 62.6254,
+            "thresholds": {
+                "p(95)<500": true
+            }
+        },
+        "checks": {
+            "fails": 1988,
+            "passes": 17747,
+            "value": 0.8992652647580441
+        },
+        "biobeats_google_auth_attempt_rate": {
+            "passes": 158,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_failed": {
+            "passes": 1861,
+            "fails": 6161,
+            "thresholds": {
+                "rate<0.01": true
+            },
+            "value": 0.2319870356519571
+        },
+        "http_req_duration": {
+            "min": 0.5094,
+            "med": 212.7529,
+            "max": 60001.3114,
+            "p(90)": 511.95324000000016,
+            "p(95)": 819.9364599999999,
+            "avg": 1978.876941772625,
+            "thresholds": {
+                "p(95)<800": true
+            }
+        },
+        "http_req_duration{group:::10 Notifications}": {
+            "avg": 190.294718851436,
+            "min": 125.2454,
+            "med": 144.6655,
+            "max": 899.8387,
+            "p(90)": 285.6468,
+            "p(95)": 362.3802,
+            "thresholds": {
+                "p(95)<500": false
+            }
+        }
+    },
+    "setup_data": {
+        "playlistId": "69ea6e5679ba6666d7b0048a",
+        "targetUserId": "69cefcfca47de9fd5a6da727",
+        "trackId": "69cffa194d0969c445881a5d",
+        "conversationId": "69e198313ca234d0611730d8",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDgwNjA3MGY3YzkxMTY5N2VkMDM5MSIsInJvbGUiOiJBcnRpc3QiLCJpYXQiOjE3Nzc3Nzg2NDQsImV4cCI6MTc3Nzc3OTU0NH0.Xz8NAz_yW1ODTuPhYUPzPFUY1VgrQc1VviBkegry4_Q",
+        "userId": "69d806070f7c911697ed0391",
+        "adminToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZTJiOWMwNDk0NDdlOWE1YjFhNTQ1OCIsInJvbGUiOiJBZG1pbiIsImlhdCI6MTc3Nzc3ODY0NCwiZXhwIjoxNzc3Nzc5NTQ0fQ.8j7dq1MgIdQMqACLPDc73pprQc3xy2AVT3UdboUqiOc",
+        "baseUrl": "http://localhost:5000/api",
+        "permalink": "e2e-tester"
+    }
+}
