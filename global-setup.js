@@ -2,7 +2,7 @@ const { chromium } = require('@playwright/test');
 require('dotenv').config();
 
 module.exports = async () => {
-  const browser = await chromium.launch({ headless: false }); // Set to false once to see it happen
+  const browser = await chromium.launch({ headless: true }); // Use headless mode for CI
   const context = await browser.newContext();
   const page = await context.newPage();
 
@@ -21,7 +21,6 @@ module.exports = async () => {
   await page.reload();
   await page.waitForLoadState('load');
 
-  // 🔥 THE FIX: Give the frontend framework up to 10 seconds to render the avatar after the refresh
   await page.getByTestId('navbar-user-avatar').waitFor({ state: 'visible', timeout: 10000 }).catch(() => { });
 
   // 3. Final Check: If we are still logged in after a refresh, save the state
@@ -33,4 +32,4 @@ module.exports = async () => {
   }
 
   await browser.close();
-}; 
+};
