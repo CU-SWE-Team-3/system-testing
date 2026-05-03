@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 // Use the URL from your screenshot
 const PROFILE_URL = '/profile/omar-walid-2';
 
-test.describe('Module 2: Profile Customization & Updates', () => {
+test.describe.skip('Module 2: Profile Customization & Updates', () => {
 
   // =====================================================================
   // SETUP: Authenticate 

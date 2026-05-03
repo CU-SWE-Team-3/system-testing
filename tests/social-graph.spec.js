@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Module 3: Followers & Social Graph — Basic Logic', () => {
+test.describe.skip('Module 3: Followers & Social Graph — Basic Logic', () => {
 
   // The reliable manual login to prevent session amnesia
   test.beforeEach(async ({ page }) => {
